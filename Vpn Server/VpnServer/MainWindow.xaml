@@ -1,0 +1,25 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="VpnServer.MainWindow"
+        Title="MainWindow" Height="436.771" Width="1231.943">
+    <Grid>
+        <ListBox x:Name="serverComputersListBox" HorizontalAlignment="Left" Height="110" Margin="21,87,0,0" VerticalAlignment="Top" Width="188"/>
+        <ListBox x:Name="clientsList" HorizontalAlignment="Left" Height="110" Margin="1023,87,0,0" VerticalAlignment="Top" Width="184" SelectionChanged="clientsList_SelectionChanged"/>
+        <ListBox x:Name="localPacketListBox" HorizontalAlignment="Left" Height="110" Margin="242,87,0,0" VerticalAlignment="Top" Width="350"/>
+        <ListBox x:Name="globalPacketListBox" HorizontalAlignment="Left" Height="110" Margin="630,87,0,0" VerticalAlignment="Top" Width="350" RenderTransformOrigin="0.354,0.448"/>
+        <Grid x:Name="ClientGrid" Visibility="Hidden" Background="Azure" Margin="1023,214,85,25">
+            <CheckBox Content="Transfer Icmp" x:Name="policyIcmp" HorizontalAlignment="Left" Margin="10,57,0,0" VerticalAlignment="Top" IsChecked="True" Checked="policyIcmp1_Checked" Unchecked="policyIcmp1_Unchecked"/>
+            <CheckBox Content="Transfer Tcp" x:Name="policyTcp" HorizontalAlignment="Left" Margin="10,82,0,0" VerticalAlignment="Top" IsChecked="True" Checked="policyTcp_Checked" Unchecked="policyTcp_Unchecked"/>
+            <Label Content="Policies" HorizontalAlignment="Left" Margin="10,32,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.184,0.115"/>
+            <Label Content="Client:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+            <Label Content="Label" x:Name="ipLabel" HorizontalAlignment="Left" Margin="53,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.5,-0.038"/>
+        </Grid>
+        <Label Content="Local Network Computers" HorizontalAlignment="Left" Margin="39,61,0,0" VerticalAlignment="Top"/>
+        <Label Content="Vpn Server To Computer" HorizontalAlignment="Left" Margin="338,61,0,0" VerticalAlignment="Top"/>
+        <Label Content="Client To Server" HorizontalAlignment="Left" Margin="764,61,0,0" VerticalAlignment="Top"/>
+        <Label Content="Clients" HorizontalAlignment="Left" Margin="1098,61,0,0" VerticalAlignment="Top"/>
+        <Label Content="Vpn Server" HorizontalAlignment="Left" Margin="550,0,0,0" VerticalAlignment="Top" FontSize="20"/>
+
+    </Grid>
+</Window>
